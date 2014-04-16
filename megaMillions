@@ -1,0 +1,42 @@
+public class MegaMillions extends lottoGame {
+
+	public MegaMillions() {
+		super(75, 15);
+
+	}//End Constructor
+
+	@Override// override method
+	public String Winnings(){
+		if(this.getWhiteWins() == 5 && this.getRedWins() == 1)
+		{
+			return "Jackpot";
+		}
+		else if(this.getWhiteWins() == 5 && this.getRedWins() == 0)
+		{
+			return "You win a million dollars!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 1)
+		{
+			return "You win $5000!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 0)
+		{
+			return "You Win $500!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 1)
+		{
+			return "You win $50.00!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 0)
+		{
+			return "You win $5.00!";
+		}
+		else
+		{
+			return "Sorry, you didn't win. Try Again!";
+		}
+
+	}//End Method
+
+
+}//End Class
