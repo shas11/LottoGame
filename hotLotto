@@ -1,0 +1,92 @@
+import java.util.Random;
+
+
+public class HotLotto extends lottoGame {
+
+
+	private int Siz;
+
+	public HotLotto() {
+		super(47, 19);
+		Random rand = new Random();
+		this.Siz = rand.nextInt(1);
+	}
+	@Override // override method
+	public String Winnings()
+	{
+		//With Sizzler
+		if(this.getWhiteWins() == 5 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "Jackpot";
+		}
+		else if(this.getWhiteWins() == 5 && this.getRedWins() == 0 && Siz ==1)
+		{
+			return "You win $30,000!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "You win $1,500!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 0 && Siz ==1)
+		{
+			return "You Win $150!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "You win $12!";
+		}
+		else if(this.getWhiteWins() == 2 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "You win $12.00!";
+		}
+		else if(this.getWhiteWins() == 1 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "You win $9.00!";
+		}
+		else if(this.getWhiteWins() == 0 && this.getRedWins() == 1 && Siz ==1)
+		{
+			return "You win $6.00!";
+		}
+		//Without Sizzler
+		if(this.getWhiteWins() == 5 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win a millions dollars!";
+		}
+		else if(this.getWhiteWins() == 5 && this.getRedWins() == 0 && Siz == 0)
+		{
+			return "You win $1000!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win $500!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 0 && Siz == 0)
+		{
+			return "You Win $50.00!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win $50.00!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 0 && Siz == 0)
+		{
+			return "You win $4.00!";
+		}
+		else if(this.getWhiteWins() == 2 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win $4.00!";
+		}
+		else if(this.getWhiteWins() == 1 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win $3.00!";
+		}
+		else if(this.getWhiteWins() == 0 && this.getRedWins() == 1 && Siz == 0)
+		{
+			return "You win $2.00!";
+		}
+		else
+		{
+			return "Sorry, you didn't win. Try Again!";
+		}
+	}
+}
