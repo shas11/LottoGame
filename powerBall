@@ -1,0 +1,53 @@
+public class PowerBall extends lottoGame {
+
+	public PowerBall() {
+		super(59, 35);
+
+	}//End constructor
+
+	@Override// override method
+	public String Winnings()
+	{
+		if(this.getWhiteWins() == 5 && this.getRedWins() == 1)
+		{
+			return "JACKPOT!";
+		}
+		else if(this.getWhiteWins() == 5 && this.getRedWins() == 0)
+		{
+			return "You win a million dollars!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 1)
+		{
+			return "You win $10,000!";
+		}
+		else if(this.getWhiteWins() == 4 && this.getRedWins() == 0)
+		{
+			return "You Win $1000!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 1)
+		{
+			return "You win $100.00!";
+		}
+		else if(this.getWhiteWins() == 3 && this.getRedWins() == 0)
+		{
+			return "You win $7.00!";
+		}
+		else if(this.getWhiteWins() == 2 && this.getRedWins() == 1)
+		{
+			return "You win $7.00!";
+		}
+		else if(this.getWhiteWins() == 1 && this.getRedWins() == 1)
+		{
+			return "You win $4.00!";
+		}
+		else if(this.getWhiteWins() == 0 && this.getRedWins() == 1)
+		{
+			return "You win $4.00!";
+		}
+		else
+		{
+			return "Sorry, you didn't win. Try Again!";
+		}
+
+	}//End Method
+}//End Class
