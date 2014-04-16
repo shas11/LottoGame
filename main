@@ -1,0 +1,48 @@
+import java.util.Scanner;
+
+//Salim Hassan
+//Homework 3
+//04-07-2014
+
+public class Main {
+
+	public static void main(String[ ] args)
+	{
+		//Create class objects
+		PowerBall Power = new PowerBall();
+		MegaMillions Mega = new MegaMillions();
+		HotLotto Hot = new HotLotto();
+
+		//Scanner for input.
+		Scanner inputChoice = new Scanner( System.in );
+		int Choice;
+
+		//Menu to choose which game to play.
+		System.out.println("Enter number 1 to play PowerBall!");
+		System.out.println("Enter number 2 to play Mega Millions!");
+		System.out.println("Enter number 3 to play Hot Lotto!");
+		Choice = inputChoice.nextInt();
+
+		if(Choice == 1)
+		{
+
+			Power.SelectNum();
+			Power.Winnings();
+			System.out.println(Power.Winnings());
+		}
+		else if(Choice == 2)
+		{
+			Mega.SelectNum();
+			Mega.Winnings();
+			System.out.println(Mega.Winnings());
+		}
+
+		else if(Choice == 3)
+		{
+			Hot.SelectNum();
+			Hot.Winnings();
+			System.out.println(Hot.Winnings());
+		}
+
+	}
+}
